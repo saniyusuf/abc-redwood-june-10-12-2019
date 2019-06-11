@@ -8,10 +8,15 @@ import { Video } from "../../types/types";
 })
 export class VideoDashboardComponent implements OnInit {
   videoListData: Video[] = data;
+  selectedVideo: Video;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onVideoSelected(video: Video) {
+    this.selectedVideo = video;
+  }
 }
 
 const data = [
